@@ -37,25 +37,19 @@ public class MainActivity extends AppCompatActivity {
                 Tarefa tarefa = new Tarefa();
                 tarefa.execute("https://viacep.com.br/ws/" + estado +"/"+ cidade +"/"+  endereco +"/json/");
             }
-
         });
-
-
     }
-
     private class Tarefa extends AsyncTask<String, String, String>{
         @Override
         protected String doInBackground(String... strings) {
             String retorno = Conexao.getDados(strings[0]);
             return retorno;
         }
-
         @Override
         protected void onPostExecute(String s) {
             cepList = ConsumirJson.jsonDados(s);
             exibirDados();
         }
-
         @SuppressLint("SetTextI18n")
         private void exibirDados() {
             if(cepList.size() > 0){
