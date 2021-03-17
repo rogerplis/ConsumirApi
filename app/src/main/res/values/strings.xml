@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BUSCA DE CEP POR API</string>
+    <string name="textview">Lista de CEP</string>
+    <string name="button">BUSCAR</string>
+    <string name="uf">UF</string>
+    <string name="localidade">Cidade</string>
+    <string name="logradouro">Nome da rua</string>
+</resources>
